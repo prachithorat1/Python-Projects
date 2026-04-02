@@ -1,0 +1,157 @@
+# Changing the Value of a Variable in Python
+site_name = 'programiz.pro'
+print(site_name)
+
+# assigning a new value to site_name
+site_name = 'apple.com'
+print(site_name)
+
+# Assigning multiple values to multiple variables
+a, b, c = 5, 3.2, 'Hello'
+
+print (a)  # prints 5
+print (b)  # prints 3.2
+print (c)  # prints Hello 
+
+# There are two types of type conversion in Python.
+
+# Implicit Conversion - automatic type conversion
+# Explicit Conversion - manual type conversion
+
+# Converting integer to float
+integer_number = 123
+float_number = 1.23
+
+new_number = integer_number + float_number
+
+# display new value and resulting data type
+print("Value:",new_number)
+print("Data Type:",type(new_number))
+
+Explicit Conversion
+num_string = '12'
+num_integer = 23
+print("Data type of num_string before Type Casting:",type(num_string))
+
+
+# explicit type conversion
+num_string = int(num_string)
+
+print("Data type of num_string after Type Casting:",type(num_string))
+
+num_sum = num_integer + num_string
+
+print("Sum:",num_sum)
+print("Data type of num_sum:",type(num_sum))
+
+# Key Points to Remember
+# Type Conversion is the conversion of an object from one data type to another data type.
+# Implicit Type Conversion is automatically performed by the Python interpreter.
+# Python avoids the loss of data in Implicit Type Conversion.
+# Explicit Type Conversion is also called Type Casting, the data types of objects are converted using predefined functions by the user.
+# In Type Casting, loss of data may occur as we enforce the object to a specific data type.
+
+# operators
+
+#  Arithmetic Operators in Python
+a = 7
+b = 2
+
+# addition
+print ('Sum: ', a + b)  
+
+# subtraction
+print ('Subtraction: ', a - b)   
+
+# multiplication
+print ('Multiplication: ', a * b)  
+
+# division
+print ('Division: ', a / b) 
+
+# floor division
+print ('Floor Division: ', a // b)
+
+# modulo
+print ('Modulo: ', a % b)  
+
+# a to the power b
+print ('Power: ', a ** b)  
+
+# Assignment Operators
+# assign 10 to a
+a = 10
+
+# assign 5 to b
+b = 5 
+
+# assign the sum of a and b to a
+a += b      # a = a + b
+
+print(a)
+
+# Output: 15/
+
+#  Comparison Operators
+a = 5
+
+b = 2
+
+# equal to operator
+print('a == b =', a == b)
+
+# not equal to operator
+print('a != b =', a != b)
+
+# greater than operator
+print('a > b =', a > b)
+
+# less than operator
+print('a < b =', a < b)
+
+# greater than or equal to operator
+print('a >= b =', a >= b)
+
+# less than or equal to operator
+print('a <= b =', a <= b)
+
+# Logical Operators
+# logical AND
+print(True and True)     # True
+print(True and False)    # False
+
+# logical OR
+print(True or False)     # True
+
+# logical NOT
+print(not True)          # False
+
+# Identity operators in Python
+x1 = 5
+y1 = 5
+x2 = 'Hello'
+y2 = 'Hello'
+x3 = [1,2,3]
+y3 = [1,2,3]
+
+print(x1 is not y1)  # prints False
+
+print(x2 is y2)  # prints True
+
+print(x3 is y3)  # prints False
+
+# Membership operators in Python
+message = 'Hello world'
+dict1 = {1:'a', 2:'b'}
+
+# check if 'H' is present in message string
+print('H' in message)  # prints True
+
+# check if 'hello' is present in message string
+print('hello' not in message)  # prints True
+
+# check if '1' key is present in dict1
+print(1 in dict1)  # prints True
+
+# check if 'a' key is present in dict1
+print('a' in dict1)  # prints False
