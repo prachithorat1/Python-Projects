@@ -155,3 +155,19 @@ print(1 in dict1)  # prints True
 
 # check if 'a' key is present in dict1
 print('a' in dict1)  # prints False
+
+#  if Statement
+
+num = 10
+if num > 0:
+    print("greater than 0");
+    
+print("less than 0");
+
+number = int(input('Enter a number: '))
+
+# check if number is greater than 0
+if number > 0:
+    print(f'{number} is a positive number.')
+
+print('A statement outside the if statement.')
