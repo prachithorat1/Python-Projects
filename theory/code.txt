@@ -657,3 +657,109 @@ fruits[1] = 'banana'
 print(fruits) 
 
 # Output: TypeError: 'tuple' object does not support item assignment
+
+# Strings
+# Strings are Immutable
+
+# create a string using double quotes
+string1 = "Python programming"
+
+# create a string using single quotes
+string1 = 'Python programming'
+
+# Access String Characters in Python
+# We can access the characters in a string in three ways.
+
+# Indexing: One way is to treat strings as a list and use index values. For example,
+greet = 'hello'
+
+# access 1st index element
+print(greet[1]) # "e"
+
+# Access String Characters in Python
+# We can access the characters in a string in three ways.
+
+# Indexing: One way is to treat strings as a list and use index values. For example,
+greet = 'hello'
+
+# access 1st index element
+print(greet[1]) # "e"
+
+# Slicing: Access a range of characters in a string by using the slicing operator colon :. For example,
+greet = 'Hello'
+
+# access character from 1st index to 3rd index
+print(greet[1:4])  # "ell
+
+# multiline string 
+message = """
+Never gonna give you up
+Never gonna let you down
+"""
+print(message)
+
+# Compare Two Strings
+
+str1 = "Hello, world!"
+str2 = "I love Swift."
+str3 = "Hello, world!"
+
+# compare str1 and str2
+print(str1 == str2)
+
+# compare str1 and str3
+print(str1 == str3)
+
+# Join Two or More Strings
+
+greet = "Hello, "
+name = "Jack"
+
+# using + operator
+result = greet + name
+print(result)
+
+# Output: Hello, Jack
+
+# Iterate Through a Python String - We can iterate through a string using a for loop. 
+greet = 'Hello'
+
+# iterating through greet string
+for letter in greet:
+    
+greet = 'Hello'
+
+# count length of greet string
+print(len(greet))
+
+# Output: 5
+
+# Methods	Description
+# upper() 	Converts the string to uppercase
+# lower()	Converts the string to lowercase
+# partition()	Returns a tuple
+# replace()	Replaces substring inside
+# find()	Returns the index of the first occurrence of substring
+# rstrip()	Removes trailing characters
+# split()	Splits string from left
+# startswith()	Checks if string starts with the specified string
+# isnumeric()	Checks numeric characters
+# index()	Returns index of substring
+
+
+# escape double quotes
+example = "He said, \"What's there?\""
+
+# escape single quotes
+example = 'He said, "What\'s there?"'
+
+print(example)
+
+# Output: He said, "What's there?"
+
+# String Formatting (f-Strings)
+name = 'Cathy'
+country = 'UK'
+
+print(f'{name} is from {country}')
+    print(letter)
