@@ -763,3 +763,292 @@ country = 'UK'
 
 print(f'{name} is from {country}')
     print(letter)
+
+
+
+# Sets
+# A set is a collection of unique data, meaning that elements within a set cannot be duplicated.
+
+# create a set of integer type
+student_id = {112, 114, 116, 118, 115}
+print('Student ID:', student_id)
+
+# create a set of string type
+vowel_letters = {'a', 'e', 'i', 'o', 'u'}
+print('Vowel Letters:', vowel_letters)
+
+# create a set of mixed data types
+mixed_set = {'Hello', 101, -2, 'Bye'}
+print('Set of mixed data types:', mixed_set)
+
+# create an empty set
+empty_set = set()
+
+# create an empty dictionary
+empty_dictionary = { }
+
+# check data type of empty_set
+print('Data type of empty_set:', type(empty_set))
+
+# check data type of dictionary_set
+print('Data type of empty_dictionary:', type(empty_dictionary))
+
+# Add and Update Set Items in Python
+# Sets are mutable. However, since they are unordered, indexing has no meaning.
+
+# We cannot access or change an element of a set using indexing or slicing. The set data type does not support it.
+
+# Add Items to a Set 
+
+numbers = {21, 34, 54, 12}
+
+print('Initial Set:',numbers)
+
+# using add() method
+numbers.add(32)
+
+print('Updated Set:', numbers) 
+
+# Update 
+
+companies = {'Lacoste', 'Ralph Lauren'}
+tech_companies = ['apple', 'google', 'apple']
+
+# using update() method
+companies.update(tech_companies)
+
+print(companies)
+
+# Output: {'google', 'apple', 'Lacoste', 'Ralph Lauren'}
+
+# Remove an Element from a Set
+
+languages = {'Swift', 'Java', 'Python'}
+
+print('Initial Set:',languages)
+
+# remove 'Java' from a set
+removedValue = languages.discard('Java')
+
+print('Set after remove():', languages)
+
+
+# Function	Description
+# all()	Returns True if all elements of the set are true (or if the set is empty).
+# any()	Returns True if any element of the set is true. If the set is empty, returns False.
+# enumerate()	Returns an enumerate object. It contains the index and value for all the items of the set as a pair.
+# len()	Returns the length (the number of items) in the set.
+# max()	Returns the largest item in the set.
+# min()	Returns the smallest item in the set.
+# sorted()	Returns a new sorted list from elements in the set(does not sort the set itself).
+# sum()	Returns the sum of all elements in the set.
+
+# Iterate Over a Set in Python
+fruits = {"Apple", "Peach", "Mango"}
+
+# for loop to access each fruits
+for fruit in fruits: 
+    print(fruit)
+    
+# Find Number of Set Elements
+# We can use the len() method to find the number of elements present in a Set. For example,
+
+even_numbers = {2,4,6,8}
+print('Set:',even_numbers)
+
+# find number of elements
+print('Total Elements:', len(even_numbers))
+
+
+# UNION
+# first set
+A = {1, 3, 5}
+
+# second set
+B = {0, 2, 4}
+
+# perform union operation using |
+print('Union using |:', A | B)
+
+# INSERTION
+# first set
+A = {1, 3, 5}
+
+# second set
+B = {1, 2, 3}
+
+# perform intersection operation using &
+print('Intersection using &:', A & B)
+
+# perform intersection operation using intersection()
+print('Intersection using intersection():', A.intersection(B)) 
+
+# DIFFERENCE
+# first set
+A = {2, 3, 5}
+
+# second set
+B = {1, 2, 6}
+
+# perform difference operation using &
+print('Difference using &:', A - B)
+
+# perform difference operation using difference()
+print('Difference using difference():', A.difference(B)) 
+
+# SYMMETRIC
+# first set
+A = {2, 3, 5}
+
+# second set
+B = {1, 2, 6}
+
+# perform difference operation using &
+print('using ^:', A ^ B)
+
+# using symmetric_difference()
+print('using symmetric_difference():', A.symmetric_difference(B)) 
+
+# perform union operation using union()
+print('Union using union():', A.union(B)) 
+
+
+# Check if two sets are equal
+# first set
+A = {1, 3, 5}
+
+# second set
+B = {3, 5, 1}
+
+# perform difference operation using &
+if A == B:
+    print('Set A and Set B are equal')
+else:
+    print('Set A and Set B are not equal')
+    
+    
+# Python Dictionary
+# A Python dictionary is a collection of items, similar to lists and tuples. However, unlike lists and tuples, each item in a dictionary is a key-value pair (consisting of a key and a value).Keys of a dictionary must be immutable
+
+# creating a dictionary
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+# printing the dictionary
+print(country_capitals)
+
+
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+# access the value of keys
+print(country_capitals["Germany"])    # Output: Berlin
+print(country_capitals["England"])    # Output: London
+
+
+hogwarts_houses = {
+    "Harry Potter": "Gryffindor",
+    "Hermione Granger": "Gryffindor",
+    "Ron Weasley": "Gryffindor",
+    # duplicate key with a different house
+    "Harry Potter": "Slytherin"
+}
+
+print(hogwarts_houses)
+
+# Access Dictionary Items
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+# access the value of keys
+print(country_capitals["Germany"])    # Output: Berlin
+print(country_capitals["England"])    # Output: London
+
+# Add Items to a Dictionary
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+}
+
+# add an item with "Italy" as key and "Rome" as its value
+country_capitals["Italy"] = "Rome"
+
+print(country_capitals)
+
+# Remove Dictionary Items
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+}
+
+# delete item having "Germany" key
+del country_capitals["Germany"]
+
+print(country_capitals)
+
+# clear method
+country_capitals = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+}
+
+# clear the dictionary
+country_capitals.clear()
+
+print(country_capitals)  
+
+
+# Change Dictionary Items
+# Python dictionaries are mutable (changeable)
+country_capitals = {
+  "Germany": "Berlin", 
+  "Italy": "Naples", 
+  "England": "London"
+}
+
+# change the value of "Italy" key to "Rome"
+country_capitals["Italy"] = "Rome"
+
+print(country_capitals)
+
+# Iterate Through a Dictionary
+country_capitals = {
+  "United States": "Washington D.C.", 
+  "Italy": "Rome" 
+}
+
+# print dictionary keys one by one
+for country in country_capitals:
+    print(country)
+
+print()
+
+# print dictionary values one by one
+for country in country_capitals:
+    capital = country_capitals[country]
+    print(capital)
+    
+# Find Dictionary Length
+country_capitals = {"England": "London", "Italy": "Rome"}
+
+# get dictionary's length
+print(len(country_capitals))   # Output: 2
+
+numbers = {10: "ten", 20: "twenty", 30: "thirty"}
+
+# get dictionary's length
+print(len(numbers))            # Output: 3
+
+countries = {}
+
+# get dictionary's length
+print(len(countries))          # Output: 0
