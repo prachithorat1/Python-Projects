@@ -1,56 +1,109 @@
-Python Function Arguments
-In computer programming, an argument is a value that is accepted by a function.
+Variable Scope
+ local scope, global, and nonlocal scope.
 
-def add_number(a,b):
-  sum =  a + b
-  print('Sum:', sum)
+Local Variables
+When we declare variables inside a function, these variables will have a local scope (within the function). We cannot access them outside the function.
 
-add_number(2,3)
+def greet():
 
-Function Argument with Default Values
-
-def add_numbers( a = 7,  b = 8):
-    sum = a + b
-    print('Sum:', sum)
-
-
-# function call with two arguments
-add_numbers(2, 3)
-
-#  function call with one argument
-add_numbers(a = 2)
-
-# function call with no arguments
-add_numbers()
-
-Python Keyword Argument
-
-def display_info(first_name, last_name):
-    print('First Name:', first_name)
-    print('Last Name:', last_name)
-
-display_info(last_name = 'Cartman', first_name = 'Eric')
-
-Python Function With Arbitrary Arguments
-Arbitrary arguments allow us to pass a varying number of values during a function call.
-
-We use an asterisk (*) before the parameter name to denote this kind of argument.
-
-# program to find sum of multiple numbers 
-
-def find_sum(*numbers):
-    result = 0
+    # local variable
+    message = 'Hello'
     
-    for num in numbers:
-        result = result + num
-    
-    print("Sum = ", result)
+    print('Local', message)
 
-# function call with 3 arguments
-find_sum(1, 2, 3)
+greet()
 
-# function call with 2 arguments
-find_sum(4, 9)
+# try to access message variable 
+# outside greet() function
+print(message)
+
+Global Variables
+In Python, a variable declared outside of the function or in global scope is known as a global variable. This means that a global variable can be accessed inside or outside of the function.
+
+# declare global variable
+message = 'Hello'
+
+def greet():
+    # declare local variable
+    print('Local', message)
+
+greet()
+print('Global', message)
+
+Nonlocal Variables
+In Python, the nonlocal keyword is used within nested functions to indicate that a variable is not local to the inner function, but rather belongs to an enclosing function’s scope.
+
+This allows you to modify a variable from the outer function within the nested function, while still keeping it distinct from global variables.
+
+# outside function 
+def outer():
+    message = 'local'
+
+    # nested function  
+    def inner():
+
+        # declare nonlocal variable
+        nonlocal message
+
+        message = 'nonlocal'
+        print("inner:", message)
+
+    inner()
+    print("outer:", message)
+
+outer()
+
+ Global Keyword
+In Python, the global keyword allows us to modify the variable outside of the current scope.
+
+It is used to create a global variable and make changes to the variable in a local context.
+
+Access and Modify Python Global Variable
+c = 1 # global variable
+
+def add():
+    print(c)
+
+add()
+
+# Output: 1
 
 
+//error
 
+# global variable
+c = 1 
+
+def add():
+
+     # increment c by 2
+    c = c + 2
+
+    print(c)
+
+add()
+
+# global variable
+c = 1 
+
+def add():
+
+    # use of global keyword
+    global c
+
+    # increment c by 2
+    c = c + 2 
+
+    print(c)
+
+add()
+
+# Output: 3 
+
+Rules of global Keyword
+The basic rules for global keyword in Python are:
+
+When we create a variable inside a function, it is local by default.
+When we define a variable outside of a function, it is global by default. You don't have to use the global keyword.
+We use the global keyword to modify (write to) a global variable inside a function.
+Use of the global keyword outside a function has no effect.
